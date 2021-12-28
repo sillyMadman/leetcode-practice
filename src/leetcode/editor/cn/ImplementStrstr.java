@@ -61,6 +61,8 @@ public class ImplementStrstr {
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public int strStr(String haystack, String needle) {
+            //暴力解题法，从每一个首字母开始进行循环匹配
+            //同时要判断剩余长度是否足够，如果不够直接返回-1
             int hLength = haystack.length();
             int nLength = needle.length();
             for (int i = 0; i + nLength <= hLength; i++) {
